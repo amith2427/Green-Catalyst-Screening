@@ -1,0 +1,9 @@
+zero_based_cell_index,execution_count,role
+7,,"Legacy exploratory ML and GPI on older 300-row dataset; not final 5,000-row benchmark"
+125,2,"Primary completed result execution: 20-seed five-fold random/group CV, SVR ablation, writes metrics log, generates Seed 42 reference data and SHAP, writes LaTeX; pdflatex compile failed afterward because unavailable"
+126,3,"Install/build LaTeX artifacts; no model evaluation"
+127,4,"Manuscript/label and link text changes; no result regeneration"
+128,5,"Computes oracle metrics; uses existing CV log if present, regenerates reference data, SHAP/GPI and manuscript; output confirms skipped CV loop"
+129,6,"Abstract wording and page layout/formatting only"
+130,7,"Formatting fixes: hidelinks, raw Markdown bold and DOI wrapping; no model evaluation"
+131,8,"Latest final pipeline: conditionally reruns CV if metrics log is absent/incomplete; in recorded execution it found existing metrics log, updated oracle columns, regenerated Seed 42 CSV, recomputed SHAP and produced current PDFs"

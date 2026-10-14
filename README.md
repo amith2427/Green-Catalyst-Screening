@@ -1,42 +1,40 @@
 # Synthetic Chemoinformatics Testbed
 
-This repository is being initialized for the preliminary computational technical note:
+**Status: source and traceability files published; full archive release is not yet complete.**
 
-**A Synthetic Chemoinformatics Testbed for Evaluating Model Interpretability and Green Catalyst Prioritization**
+This repository supports the preliminary computational technical note **“A Synthetic Chemoinformatics Testbed for Evaluating Model Interpretability and Green Catalyst Prioritization.”** The benchmark is entirely synthetic and must not be interpreted as experimental chemistry evidence.
 
-Author: Gagan Sai Amith Pennada, VIT-AP University.
+## Contents
 
-## Scope
+- `reproduce_benchmark.py` — consolidated script for regenerating the Seed 42 dataset, GPI top ten, SHAP output, environment manifest, and the 20-seed cross-validation metrics.
+- `substrates.csv` — 22 substrate SMILES and fixed two-decimal exact-mass values used by the notebook.
+- `20_seed_metrics_log.csv` — archived seed-level metrics (seeds 42–61) corresponding to the manuscript tables.
+- `requirements.txt` — Python dependencies.
+- `notebook_cell_trace.csv`, `notebook_source_manifest.json`, and `TRACEABILITY_REPORT.md` — notebook lineage and validation caveats.
 
-The project contains a synthetic benchmark of 5,000 catalytic alcohol-oxidation reactions and a 20-seed evaluation comparing Linear Regression, XGBoost, Random Forest, and RBF-SVR. The data-generating process is an additive synthetic heuristic, not a model of experimentally validated catalyst performance.
+The generated dataset and plot are written to the output directory; the dataset CSV is not currently committed separately.
 
-## Reproducibility status
+## Reproduce
 
-This repository is being prepared from the final Google Colab notebook and associated outputs. The notebook contains older experimental cells as well as the final pipeline. Before claiming fully independent reproducibility, a clean run of the full 20-seed cross-validation must complete successfully.
+Use Python with the listed dependencies installed, then run:
 
-The primary result-generation path identified so far is:
-- Cell 125: full 20-seed / five-fold model evaluation and SVR decoy ablation.
-- Cell 131: finalization path that reuses an existing metrics log when present, adds oracle metrics, regenerates the Seed 42 dataset, computes TreeSHAP and GPI outputs, and builds manuscript source/PDF outputs.
+```bash
+python -m pip install -r requirements.txt
+python reproduce_benchmark.py --output-dir outputs
+```
 
-Please consult the traceability report and reproduction script in this repository for exact details and limitations.
+The full cross-validation is computationally intensive. It recomputes the model suite instead of silently reusing the archived metrics log. Generated files include `outputs/20_seed_metrics_log.csv`, `outputs/synthetic_benchmark_dataset.csv`, `outputs/gpi_top10.csv`, `outputs/shap_importance.csv`, `outputs/docs/Figure1_SHAP.png`, and `outputs/environment.json`.
 
-## Files
+## Traceability and limits
 
-Files will be added in subsequent commits:
-- Dataset (Seed 42): `synthetic_benchmark_dataset.csv`
-- Metrics log: `20_seed_metrics_log.csv`
-- Final manuscript and supplementary information
-- Reproduction script and traceability report
+The reviewed notebook has 132 cells. Cell 125's recorded execution ran the full 20-seed CV loop. The latest finalization cell, 131, found an existing metric log and did not rerun CV during that recorded execution; it regenerated the Seed 42 dataset and SHAP/GPI outputs. The current CSV values and manuscript summary were checked for consistency. A separate clean run of the full CV suite has **not** yet completed successfully in this environment, so the archived results are traceable but not independently reproduced here.
 
-## Data and code availability
+- Labels and reactions are synthetic.
+- Substrate identity affects the target through exact mass; no substrate-specific random effects are modeled.
+- Decoy features are independent uniform draws.
+- Seed 42 TreeSHAP results are illustrative for one fitted model, not evidence of causal validity or attribution stability across seeds.
+- GPI is an author-defined heuristic, not a validated sustainability metric.
 
-The Zenodo record / DOI is not yet verified or established for this release. A DOI will be added here only after the record is published and checked.
+## Publication / DOI status
 
-## Limitations
-
-- All reactions and labels are synthetic.
-- Substrate identity affects the target through exact monoisotopic mass without substrate-specific random effects.
-- Decoy columns are independently sampled uniform noise.
-- The SVR ablation is limited to the stated untuned configuration.
-- Seed 42 TreeSHAP analysis is illustrative and does not demonstrate cross-seed attribution stability.
-- The GPI is an author-defined illustrative decision heuristic, not a validated sustainability metric.
+This repository is public, but no Zenodo record has been created or verified as part of this release workflow. **Do not cite a Zenodo DOI yet.** The manuscript PDFs have been withheld from this repository because their public-availability links still need to be updated and verified after the archive record is published.

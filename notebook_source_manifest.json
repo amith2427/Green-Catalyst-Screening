@@ -1,0 +1,26 @@
+{
+  "notebook_filename": "Chem_Re (1).ipynb",
+  "notebook_sha256": "81c0efa4d847e91f081bca068bffd654cc59ca915ce2b95b19d79deca17de7db",
+  "cell_count": 132,
+  "key_cells": {
+    "125": {
+      "execution_count": 2,
+      "source_sha256": "4951a49b05ca3ff87eb82bf539127d83ce519acdbb20efa91459992c9493636a",
+      "source_lines": 439,
+      "source_bytes": 25515
+    },
+    "128": {
+      "execution_count": 5,
+      "source_sha256": "8b4d1738b25746533911a3831bd31e06d82e0e6d6ec81b9995592b49a4bad2b4",
+      "source_lines": 479,
+      "source_bytes": 30381
+    },
+    "131": {
+      "execution_count": 8,
+      "source_sha256": "8fb66d51e6a5b6ff11439fcfaf69a9a58991627007f99c9ad1f9d0a3b5c1273b",
+      "source_lines": 528,
+      "source_bytes": 31982
+    }
+  },
+  "note": "Hashes identify the uploaded notebook version used for this trace."
+}

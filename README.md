@@ -45,7 +45,7 @@ The Zenodo **concept DOI** is [10.5281/zenodo.23383768](https://doi.org/10.5281/
 
 The DOI for the initial preliminary **v0.1.0** release is [10.5281/zenodo.23383769](https://doi.org/10.5281/zenodo.23383769). Use the version-specific DOI when citing that exact release; use the concept DOI when referring to the project across versions.
 
-The GitHub release is [v0.1.0 — Preliminary Synthetic Benchmark Release](https://github.com/amith2427/Green-Catalyst-Screening/releases/tag/v0.1.0). The DOI-linked manuscript and supplementary-information PDFs are being prepared for the next complete release.
+The initial GitHub release is [v0.1.0 — Preliminary Synthetic Benchmark Release](https://github.com/amith2427/Green-Catalyst-Screening/releases/tag/v0.1.0). The DOI-updated manuscript and supplementary-information PDFs have been prepared for the next complete release and should be committed to the repository before creating the next GitHub release.
 
 ## Licenses
 

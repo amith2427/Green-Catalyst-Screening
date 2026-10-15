@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use the source code in this repository, please cite it using the metadata below. For the archived release, use the DOI displayed on its Zenodo record."
+title: "A Synthetic Chemoinformatics Testbed for Evaluating Model Interpretability and Green Catalyst Prioritization"
+type: software
+authors:
+  - given-names: Gagan Sai Amith
+    family-names: Pennada
+    affiliation: VIT-AP University, India
+version: 0.1.0
+date-released: 2026-10-15
+url: "https://github.com/amith2427/Green-Catalyst-Screening"
+license: MIT
+abstract: "A synthetic benchmark for examining machine-learning performance, decoy-feature ablation, TreeSHAP interpretation, and an illustrative Green Prioritization Index. The reactions and targets are synthetic and are not experimental chemistry evidence. See TRACEABILITY_REPORT.md for the status and limitations of the archived metrics."
+keywords:
+  - chemoinformatics
+  - synthetic benchmark
+  - machine learning
+  - model interpretability
+  - catalytic alcohol oxidation
+  - reproducibility

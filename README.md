@@ -1,39 +1,54 @@
-# Synthetic Chemoinformatics Testbed
+# A Synthetic Chemoinformatics Testbed for Catalyst Prioritization
 
-**Status: code, data, and traceability artifacts are published. The archival DOI release and final manuscript PDFs are not yet complete.**
+[![DOI](https://zenodo.org/badge/1419940824.svg)](https://doi.org/10.5281/zenodo.23383768)
 
-This repository supports the preliminary computational technical note **“A Synthetic Chemoinformatics Testbed for Evaluating Model Interpretability and Green Catalyst Prioritization.”** The benchmark is entirely synthetic and must not be interpreted as experimental chemistry evidence.
+Welcome, and thank you for visiting this repository.
 
-## Contents
+I developed this project to explore how common machine-learning models behave on a controlled, synthetic benchmark of catalytic alcohol oxidation. It accompanies my preliminary computational technical note, **“A Synthetic Chemoinformatics Testbed for Evaluating Model Interpretability and Green Catalyst Prioritization.”**
 
-- `synthetic_benchmark_dataset.csv` — 5,000-row Seed 42 dataset (13 columns) with synthetic yield, decoy features, selectivity/sustainability scores, and GPI score.
-- `reproduce_benchmark.py` — consolidated script to recompute 20-seed random/grouped CV, SVR decoy ablation, oracle metrics, reference dataset, GPI top ten, TreeSHAP output, and environment manifest.
-- `substrates.csv` — 22 substrate SMILES and fixed two-decimal exact-mass values.
-- `20_seed_metrics_log.csv` — archived per-seed metrics (seeds 42–61) corresponding to the manuscript summary tables.
-- `requirements.txt` — Python dependencies.
-- `notebook_cell_trace.csv`, `notebook_source_manifest.json`, and `TRACEABILITY_REPORT.md` — notebook lineage and validation caveats.
+**Important scope note:** every reaction and target in this benchmark is synthetic. The benchmark is for computational testing and methodological demonstration; it is not experimental evidence or a validated prediction of real catalyst performance.
 
-## Reproduce
+## Repository contents
 
-Use Python with the listed dependencies installed, then run:
+- **`synthetic_benchmark_dataset.csv`** — 5,000 synthetic reactions from the Seed 42 reference dataset, including reaction features, generated yield targets, decoy variables, and illustrative selectivity, sustainability, and GPI scores.
+- **`20_seed_metrics_log.csv`** — archived seed-level evaluation metrics for seeds 42–61.
+- **`reproduce_benchmark.py`** — consolidated script intended to regenerate the dataset and result outputs, run the 20-seed cross-validation suite, compare SVR with and without decoy features, and calculate oracle metrics and SHAP/GPI results.
+- **`substrates.csv`** — the 22 substrate SMILES and fixed exact-mass values used by the benchmark.
+- **`requirements.txt`** — Python dependencies.
+- **`TRACEABILITY_REPORT.md`, `notebook_cell_trace.csv`, and `notebook_source_manifest.json`** — documentation of the notebook execution path, artifact checks, and validation limitations.
+- **`LICENSE` and `LICENSE-DATA.md`** — licensing terms for the software and data/documentation, respectively.
+
+## Running the reproduction script
+
+With Python installed, run:
 
 ```bash
 python -m pip install -r requirements.txt
 python reproduce_benchmark.py --output-dir outputs
 ```
 
-The full cross-validation is computationally intensive. The script recomputes the model suite instead of silently reusing the archived metrics log. Generated files include `outputs/20_seed_metrics_log.csv`, `outputs/synthetic_benchmark_dataset.csv`, `outputs/gpi_top10.csv`, `outputs/shap_importance.csv`, `outputs/docs/Figure1_SHAP.png`, and `outputs/environment.json`.
+The complete cross-validation suite may take some time to run. The script recomputes the model-evaluation suite rather than silently reusing the archived metrics log. Its output directory is expected to contain regenerated metrics and dataset files, the GPI top-ten table, SHAP importance output and figure, and an environment manifest.
 
-## Traceability and limits
+## Interpreting the results
 
-The reviewed notebook has 132 cells. Cell 125's recorded execution ran the full 20-seed CV loop. The latest finalization cell, 131, found an existing metric log and did not rerun CV during that recorded execution; it regenerated the Seed 42 dataset and SHAP/GPI outputs. The uploaded CSV's generation logic and archived metric summary were checked for consistency. A separate clean run of the full CV suite has **not** yet completed successfully in this environment, so the archived results are traceable but not independently reproduced here.
+The target yield is generated from fixed catalyst and oxidant baselines, exact substrate mass, temperature, and random noise. Decoy features are independently sampled synthetic variables and are not intended to represent chemically meaningful predictors.
 
-- Labels and reactions are synthetic.
-- Substrate identity affects the target through exact mass; no substrate-specific random effects are modeled.
-- Decoy features are independent uniform draws.
-- Seed 42 TreeSHAP results are illustrative for one fitted model, not evidence of causal validity or attribution stability across seeds.
-- GPI is an author-defined heuristic, not a validated sustainability metric.
+The TreeSHAP analysis illustrates feature attribution for one fitted Seed 42 reference model. It does not establish causal relationships or attribution stability across random seeds. The Green Prioritization Index (GPI) is an author-defined heuristic for this demonstration, not a validated sustainability metric.
 
-## Publication / DOI status
+## Reproducibility status
 
-This repository is public. No Zenodo record has been created or verified as part of this workflow. **Do not cite a Zenodo DOI yet.** The manuscript PDFs are not included because their public-availability links must be updated and verified after an archive record is published.
+I checked the Seed 42 dataset-generation logic against the final notebook formulas and verified that the archived 20-seed metrics reproduce the manuscript summary statistics to three decimal places. However, the saved final notebook execution reused an existing metrics log rather than rerunning the complete cross-validation suite, and a separate clean run of the full suite has not yet completed successfully in my validation environment. I therefore describe the results as traceable and consistency-checked, not independently reproduced in a clean environment.
+
+## Citation and archival versions
+
+The Zenodo **concept DOI** is [10.5281/zenodo.23383768](https://doi.org/10.5281/zenodo.23383768). It is the stable project-level DOI intended to lead readers to the latest archived version.
+
+The DOI for the initial preliminary **v0.1.0** release is [10.5281/zenodo.23383769](https://doi.org/10.5281/zenodo.23383769). Use the version-specific DOI when citing that exact release; use the concept DOI when referring to the project across versions.
+
+The GitHub release is [v0.1.0 — Preliminary Synthetic Benchmark Release](https://github.com/amith2427/Green-Catalyst-Screening/releases/tag/v0.1.0). The DOI-linked manuscript and supplementary-information PDFs are being prepared for the next complete release.
+
+## Licenses
+
+The Python source code is provided under the MIT License. The synthetic dataset files and written documentation are provided under CC BY 4.0, as described in `LICENSE-DATA.md`. Third-party dependencies remain subject to their own licenses.
+
+Thank you for exploring this work. I hope it is useful as a transparent example of a synthetic benchmark for studying machine-learning performance, interpretability, and the limits of computational conclusions.

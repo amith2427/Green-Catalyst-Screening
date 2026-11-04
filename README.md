@@ -1,22 +1,32 @@
-# A Synthetic Chemoinformatics Testbed for Catalyst Prioritization
+# An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization
 
 [![DOI](https://zenodo.org/badge/1419940824.svg)](https://doi.org/10.5281/zenodo.23383768)
 
-Welcome, and thank you for visiting this repository.
+This repository contains code and synthetic data accompanying the manuscript listed below. It examines regression-model performance, validation protocols, sensitivity to non-causal decoy descriptors, TreeSHAP attribution, and an illustrative Green Performance Index (GPI) in a controlled synthetic catalytic alcohol-oxidation benchmark.
 
-I developed this project to explore how common machine-learning models behave on a controlled, synthetic benchmark of catalytic alcohol oxidation. It accompanies my preliminary computational technical note, **“A Synthetic Chemoinformatics Testbed for Evaluating Model Interpretability and Green Catalyst Prioritization.”**
+**Scope limitation:** every reaction, yield, selectivity score, and sustainability score in the benchmark is synthetic. The benchmark is a methodological testbed, not experimental evidence, a validated prediction of real catalyst performance, or a validated sustainability assessment.
 
-**Important scope note:** every reaction and target in this benchmark is synthetic. The benchmark is for computational testing and methodological demonstration; it is not experimental evidence or a validated prediction of real catalyst performance.
+## Associated manuscript and supplementary information
+
+**Main manuscript**
+
+Pennada, Gagan Sai Amith. *An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization.* Manuscript, School of Computer Science and Engineering, VIT-AP University, India.
+
+**Supplementary information**
+
+Pennada, Gagan Sai Amith. *Supplementary Information for “An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization”.* VIT-AP University, India.
+
+The manuscript and supplementary information do not have separate DOIs identified in the supplied files. The Zenodo concept DOI below identifies the archived software/data project, not a separately published paper DOI.
 
 ## Repository contents
 
-- **`synthetic_benchmark_dataset.csv`** — 5,000 synthetic reactions from the Seed 42 reference dataset, including reaction features, generated yield targets, decoy variables, and illustrative selectivity, sustainability, and GPI scores.
-- **`20_seed_metrics_log.csv`** — archived seed-level evaluation metrics for seeds 42–61.
-- **`reproduce_benchmark.py`** — consolidated script intended to regenerate the dataset and result outputs, run the 20-seed cross-validation suite, compare SVR with and without decoy features, and calculate oracle metrics and SHAP/GPI results.
-- **`substrates.csv`** — the 22 substrate SMILES and fixed exact-mass values used by the benchmark.
+- **`synthetic_benchmark_dataset.csv`** — the 5,000-row Seed 42 synthetic reference dataset (13 columns).
+- **`20_seed_metrics_log.csv`** — the archived 20-seed metrics and TreeSHAP log (seeds 42–61).
+- **`reproduce_benchmark.py`** — the reproduction script for the benchmark and reported analyses.
+- **`substrates.csv`** — the 22-substrate SMILES and fixed exact-mass library.
 - **`requirements.txt`** — Python dependencies.
-- **`TRACEABILITY_REPORT.md`, `notebook_cell_trace.csv`, and `notebook_source_manifest.json`** — documentation of the notebook execution path, artifact checks, and validation limitations.
-- **`LICENSE` and `LICENSE-DATA.md`** — licensing terms for the software and data/documentation, respectively.
+- **`TRACEABILITY_REPORT.md`, `notebook_cell_trace.csv`, and `notebook_source_manifest.json`** — execution-path and artifact traceability documentation.
+- **`LICENSE` and `LICENSE-DATA.md`** — the software and data/documentation licensing terms.
 
 ## Running the reproduction script
 
@@ -27,28 +37,30 @@ python -m pip install -r requirements.txt
 python reproduce_benchmark.py --output-dir outputs
 ```
 
-The complete cross-validation suite may take some time to run. The script recomputes the model-evaluation suite rather than silently reusing the archived metrics log. Its output directory is expected to contain regenerated metrics and dataset files, the GPI top-ten table, SHAP importance output and figure, and an environment manifest.
+The script recomputes the model-evaluation suite rather than silently reusing the archived metrics log. See the traceability report for the status and limitations of the archived artifacts.
 
 ## Interpreting the results
 
-The target yield is generated from fixed catalyst and oxidant baselines, exact substrate mass, temperature, and random noise. Decoy features are independently sampled synthetic variables and are not intended to represent chemically meaningful predictors.
+The target yield is generated from specified catalyst and oxidant baselines, exact substrate mass, temperature, and random noise. The decoy features are independently sampled synthetic variables and are not intended to represent chemically meaningful predictors.
 
-The TreeSHAP analysis illustrates feature attribution for one fitted Seed 42 reference model. It does not establish causal relationships or attribution stability across random seeds. The Green Prioritization Index (GPI) is an author-defined heuristic for this demonstration, not a validated sustainability metric.
+The TreeSHAP analysis is an interpretation of fitted models in this synthetic benchmark; it does not establish causal relationships. The GPI is an author-defined heuristic for the demonstration, not a validated sustainability metric.
 
 ## Reproducibility status
 
-I checked the Seed 42 dataset-generation logic against the final notebook formulas and verified that the archived 20-seed metrics reproduce the manuscript summary statistics to three decimal places. However, the saved final notebook execution reused an existing metrics log rather than rerunning the complete cross-validation suite, and a separate clean run of the full suite has not yet completed successfully in my validation environment. I therefore describe the results as traceable and consistency-checked, not independently reproduced in a clean environment.
+The archived Seed 42 dataset-generation logic and 20-seed metrics have been checked for consistency with the manuscript summary statistics. However, the saved notebook execution reused an existing metrics log rather than rerunning the complete cross-validation suite, and an independent clean run of the full suite has not yet completed successfully. The results should therefore be described as traceable and consistency-checked, not independently reproduced in a clean environment.
 
-## Citation and archival versions
+## Zenodo archive and versioning
 
-The Zenodo **concept DOI** is [10.5281/zenodo.23383768](https://doi.org/10.5281/zenodo.23383768). It is the stable project-level DOI intended to lead readers to the latest archived version.
+The Zenodo **concept DOI** is [10.5281/zenodo.23383768](https://doi.org/10.5281/zenodo.23383768). It is the stable project-level DOI intended to resolve to the latest archived version.
 
-The DOI for the initial preliminary **v0.1.0** release is [10.5281/zenodo.23383769](https://doi.org/10.5281/zenodo.23383769). Use the version-specific DOI when citing that exact release; use the concept DOI when referring to the project across versions.
+The DOI for the initial preliminary **v0.1.0** release is [10.5281/zenodo.23383769](https://doi.org/10.5281/zenodo.23383769). Use a version-specific DOI when citing a particular archived release; use the concept DOI when referring to the project across versions.
 
-The preliminary GitHub release is [v0.1.0 — Preliminary Synthetic Benchmark Release](https://github.com/amith2427/Green-Catalyst-Screening/releases/tag/v0.1.0). The DOI-updated documents are now included in the normal [v0.2.0 — DOI-Linked Manuscript and Supplementary Release](https://github.com/amith2427/Green-Catalyst-Screening/releases/tag/v0.2.0): [main manuscript PDF](main_manuscript_final.pdf) and [Supplementary Information PDF](supplementary_info_final.pdf). The stable concept DOI is [10.5281/zenodo.23383768](https://doi.org/10.5281/zenodo.23383768). Please use the version-specific DOI displayed on Zenodo when citing the exact v0.2.0 archive; it has not been independently verified from this session. The original v0.1.0 release has not been modified.
+The previous **v0.2.0** release records the earlier project/manuscript metadata. The final manuscript and supplementary-information files supplied on 4 November 2026 have a different title and are not byte-identical to the PDFs currently stored in the repository. The uploaded 20-seed metrics CSV also differs from the current repository copy. These final files, the revised dataset/logs, and the positive-control/learning-curve log must be synchronized before publishing a new Zenodo version. In particular, `supplementary_experiments_log.csv` is referenced by the manuscript and SI but is not currently present in this GitHub repository or among the files supplied in the latest upload.
+
+The next archive should be published as a new version rather than altering the files of a previously published version. Zenodo's versioning guidance explains that file updates belong in a new version, with a new version-specific DOI and the same concept DOI: [Zenodo versioning documentation](https://help.zenodo.org/docs/deposit/manage-versions/).
 
 ## Licenses
 
 The Python source code is provided under the MIT License. The synthetic dataset files and written documentation are provided under CC BY 4.0, as described in `LICENSE-DATA.md`. Third-party dependencies remain subject to their own licenses.
 
-Thank you for exploring this work. I hope it is useful as a transparent example of a synthetic benchmark for studying machine-learning performance, interpretability, and the limits of computational conclusions.
+Thank you for exploring this work. The benchmark is intended as a transparent methodological example for studying machine-learning behavior and the limits of computational conclusions.

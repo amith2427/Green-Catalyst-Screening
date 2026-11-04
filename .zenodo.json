@@ -6,7 +6,7 @@
     }
   ],
   "title": "An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization: Supporting Data and Code",
-  "description": "This software and data release accompanies the manuscript “An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization” and its Supplementary Information by Gagan Sai Amith Pennada (School of Computer Science and Engineering, VIT-AP University, India). It is intended to preserve the synthetic reference dataset, the 20-seed cross-validation/ablation/TreeSHAP metrics log, the positive-control and learning-curve log, source code, and supplementary documentation. The manuscript and Supplementary Information are companion documents and do not have separate DOIs identified in the supplied files. The Zenodo DOI assigned to this deposit identifies the supporting software/data record, not an independent DOI for the manuscript.",
+  "description": "Prepared metadata for a proposed v0.3.0 software/data archive accompanying the manuscript “An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization” and its Supplementary Information by Gagan Sai Amith Pennada (School of Computer Science and Engineering, VIT-AP University, India). The current GitHub branch contains the updated Seed 42 dataset (5,000 rows, 13 columns), updated 20-seed metrics/TreeSHAP log (20 rows, 34 columns), source code, dependencies, and traceability documentation. The final manuscript and SI PDFs supplied on 4 November 2026 have not yet replaced the earlier PDFs in the repository. The manuscript/SI refer to supplementary_experiments_log.csv for positive-control and learning-curve results; that source CSV was not supplied and is not included. Do not publish this metadata as a completed release until the final PDFs and missing CSV are added, or the documents are revised to match the deposit. All reaction data and targets are synthetic, not experimental measurements. No separate DOI for the manuscript or SI is identified in the supplied documents; the DOI for this deposit identifies the supporting software/data record only.",
   "access_right": "open",
   "license": "mit",
   "upload_type": "software",
@@ -25,7 +25,7 @@
   ],
   "references": [
     "Pennada, Gagan Sai Amith. An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization. Manuscript. School of Computer Science and Engineering, VIT-AP University, India.",
-    "Pennada, Gagan Sai Amith. Supplementary Information for “An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization”. VIT-AP University, India."
+    "Pennada, Gagan Sai Amith. Supplementary Information: An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization. VIT-AP University, India."
   ],
   "version": "0.3.0"
 }

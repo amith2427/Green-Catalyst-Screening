@@ -12,14 +12,14 @@ The supplied files identify no journal, volume, pages, or separate DOI for eithe
 
 ## Supporting data cited by the manuscript
 
-- `synthetic_benchmark_dataset.csv`: Seed 42 reference data (5,000 synthetic reactions; 13 columns). **Updated on GitHub** from the 4 November 2026 upload.
-- `20_seed_metrics_log.csv`: model metrics and TreeSHAP log (seeds 42–61; 20 rows; 34 columns). **Updated on GitHub** from the 4 November 2026 upload.
-- `supplementary_experiments_log.csv`: positive-control GroupKFold/random-CV and learning-curve results, as described in SI section S3. **Not supplied and not present in the repository.** It has not been recreated or inferred.
+- `synthetic_benchmark_dataset.csv`: Seed 42 reference dataset (5,000 synthetic reactions; 13 columns). Updated on GitHub from the 4 November 2026 upload.
+- `20_seed_metrics_log.csv`: model metrics and TreeSHAP log (seeds 42–61; 20 rows; 34 columns). Updated on GitHub from the 4 November 2026 upload.
+- `supplementary_experiments_log.csv`: positive-control substrate-effect runs (40 rows across σsub = 0, 4, 8, 12 for seeds 42–51) and seven Seed 42 learning-curve rows. Added to GitHub from the newly supplied CSV on 4 November 2026.
 
 ## Archive synchronization status — 4 November 2026
 
-The latest manuscript and SI PDFs supplied on 4 November 2026 have **not yet replaced the earlier PDFs in GitHub**. They are available as conversation attachments, but the connected GitHub write interface did not provide a usable binary upload operation in this update.
+**Data files:** all three manuscript-referenced CSVs are now present on GitHub and synchronized from the supplied files.
 
-The two CSVs above have been updated on GitHub. The positive-control/learning-curve CSV cited by the manuscript/SI remains missing. Do not describe the manuscript and supporting files as fully archived together until the final PDFs and the missing CSV have been added, or the manuscript/SI are revised to reflect the contents actually deposited.
+**PDF files:** the latest main manuscript and SI PDFs supplied on 4 November 2026 have **not yet replaced the earlier PDFs in GitHub**. The connected GitHub write interface did not provide a working binary upload operation during this update.
 
-The `.zenodo.json` file is a prepared metadata draft for a proposed v0.3.0 deposit. **No new Zenodo version has been uploaded or published**, and no new version DOI has been assigned. The existing concept DOI remains 10.5281/zenodo.23383768.
+**Zenodo:** `.zenodo.json` is prepared metadata for a proposed v0.3.0 deposit. No new Zenodo version has been uploaded or published, and no new version DOI has been assigned. The existing concept DOI remains 10.5281/zenodo.23383768. Do not describe v0.3.0 as published until the final manuscript and SI PDFs have been uploaded and the complete Zenodo record has been checked.

@@ -16,8 +16,9 @@ No separate manuscript or SI DOI is identified in the supplied files. The Zenodo
 
 ## Repository contents
 
-- `synthetic_benchmark_dataset.csv` — Seed 42 reference data (5,000 synthetic reactions; 13 columns), updated from the 4 November 2026 upload.
-- `20_seed_metrics_log.csv` — per-seed metrics and TreeSHAP log (seeds 42–61; 20 rows; 34 columns), updated from the 4 November 2026 upload.
+- `synthetic_benchmark_dataset.csv` — Seed 42 reference dataset (5,000 synthetic reactions; 13 columns).
+- `20_seed_metrics_log.csv` — per-seed metrics and TreeSHAP log (seeds 42–61; 20 rows; 34 columns).
+- `supplementary_experiments_log.csv` — positive-control substrate-effect runs (40 rows across σsub = 0, 4, 8, 12 for seeds 42–51) and Seed 42 learning curves (7 train sizes from 200 to 4,000; 47 data rows, 12 columns).
 - `reproduce_benchmark.py` — reproduction script.
 - `substrates.csv` — 22-substrate SMILES and exact-mass library.
 - `requirements.txt` — Python dependencies.
@@ -40,15 +41,13 @@ The target yield follows a specified synthetic data-generating process. Decoy fe
 
 The Seed 42 generation logic and archived metrics were checked for consistency with manuscript summary statistics. The saved notebook reused an existing metrics log rather than rerunning the complete CV suite, and a separate independent clean run has not completed successfully. Results are traceable and consistency-checked, not independently reproduced in a clean environment.
 
-## Zenodo
+## Zenodo and versioning
 
 The project concept DOI is [10.5281/zenodo.23383768](https://doi.org/10.5281/zenodo.23383768). The preliminary v0.1.0 version DOI is [10.5281/zenodo.23383769](https://doi.org/10.5281/zenodo.23383769). Cite the version DOI for a specific archived version and the concept DOI for the project across versions.
 
-The existing v0.2.0 archive is historical. The two CSVs listed above have been updated on GitHub. The final manuscript and SI PDFs supplied on 4 November 2026 have **not** replaced the earlier PDFs currently in the repository; the available GitHub write interface did not provide a usable binary upload operation in this update.
+The existing v0.2.0 archive is historical. All three final CSVs described above have now been added/replaced on GitHub from the files supplied on 4 November 2026. The final manuscript and SI PDFs supplied on that date have **not** yet replaced the earlier PDF files in the repository; the available GitHub write interface did not provide a working binary-PDF upload operation during this update.
 
-The manuscript and SI refer to `supplementary_experiments_log.csv` (positive-control and learning-curve results, SI section S3). That CSV was not among the supplied files and was not found in the searchable file library. It has not been recreated. Before publishing a new Zenodo version, add the final PDFs and that CSV, or revise the documents so they accurately describe the deposited contents. `.zenodo.json` is prepared metadata only; no new Zenodo version has been uploaded or published.
-
-Zenodo requires a new version for updates to a published archive. See [Zenodo versioning documentation](https://help.zenodo.org/docs/deposit/manage-versions/).
+The `.zenodo.json` file contains proposed v0.3.0 metadata only. No new Zenodo version has been uploaded or published, and no new version DOI has been assigned. Before publishing v0.3.0, add the final manuscript and SI PDFs to GitHub and the Zenodo deposit, then verify the full contents. See [Zenodo versioning documentation](https://help.zenodo.org/docs/deposit/manage-versions/).
 
 ## Licenses
 

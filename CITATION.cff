@@ -1,14 +1,13 @@
 cff-version: 1.2.0
-message: "If you use the software and synthetic benchmark data, cite the archived release using its version-specific Zenodo DOI. The concept DOI identifies the project across versions."
+message: "For the code and synthetic benchmark data, cite the archived Zenodo release using its version-specific DOI. The project concept DOI identifies the archived project across versions. For the companion manuscript, use the preferred citation below."
 title: "Green Catalyst Screening: Supporting Data and Code for an Interpretable Chemoinformatics Benchmark"
 type: software
 authors:
   - given-names: Gagan Sai Amith
     family-names: Pennada
     affiliation: VIT-AP University, India
-version: 0.3.0
+version: "0.3.0-pre-release"
 url: "https://github.com/amith2427/Green-Catalyst-Screening"
-doi: "10.5281/zenodo.23383768"
 license: MIT
 abstract: "Supporting code and a synthetic chemoinformatics benchmark for auditing regression models, cross-validation strategies, sensitivity to non-causal decoy descriptors, TreeSHAP attributions, and an illustrative Green Performance Index. All reaction data and targets are synthetic; they are not experimental chemistry evidence or validated predictions of catalyst performance. The archived metrics are traceable and consistency-checked, but a complete independent clean rerun has not yet succeeded."
 keywords:

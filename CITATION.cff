@@ -1,20 +1,30 @@
 cff-version: 1.2.0
-message: "If you use the source code in this repository, please cite it using the metadata below. For the archived release, use the DOI displayed on its Zenodo record."
-title: "A Synthetic Chemoinformatics Testbed for Evaluating Model Interpretability and Green Catalyst Prioritization"
+message: "If you use the software and synthetic benchmark data, cite the archived release using its version-specific Zenodo DOI. The concept DOI identifies the project across versions."
+title: "Green Catalyst Screening: Supporting Data and Code for an Interpretable Chemoinformatics Benchmark"
 type: software
 authors:
   - given-names: Gagan Sai Amith
     family-names: Pennada
     affiliation: VIT-AP University, India
-version: 0.2.0
-date-released: 2026-10-15
+version: 0.3.0
 url: "https://github.com/amith2427/Green-Catalyst-Screening"
+doi: "10.5281/zenodo.23383768"
 license: MIT
-abstract: "A synthetic benchmark for examining machine-learning performance, decoy-feature ablation, TreeSHAP interpretation, and an illustrative Green Prioritization Index. The reactions and targets are synthetic and are not experimental chemistry evidence. See TRACEABILITY_REPORT.md for the status and limitations of the archived metrics."
+abstract: "Supporting code and a synthetic chemoinformatics benchmark for auditing regression models, cross-validation strategies, sensitivity to non-causal decoy descriptors, TreeSHAP attributions, and an illustrative Green Performance Index. All reaction data and targets are synthetic; they are not experimental chemistry evidence or validated predictions of catalyst performance. The archived metrics are traceable and consistency-checked, but a complete independent clean rerun has not yet succeeded."
 keywords:
   - chemoinformatics
   - synthetic benchmark
   - machine learning
   - model interpretability
   - catalytic alcohol oxidation
+  - cross-validation
+  - decoy sensitivity
+  - TreeSHAP
   - reproducibility
+preferred-citation:
+  type: article
+  title: "An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization"
+  authors:
+    - given-names: Gagan Sai Amith
+      family-names: Pennada
+  notes: "Manuscript supplied with accompanying Supplementary Information; no separate DOI or journal publication details were supplied."

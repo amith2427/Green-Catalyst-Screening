@@ -1,22 +1,27 @@
 cff-version: 1.2.0
-message: "For the code and synthetic benchmark data, cite the version-specific Zenodo DOI after the corresponding release is published. The project concept DOI identifies the archive across versions. The companion manuscript has no separate DOI in the supplied materials."
+message: "For this exact v0.3.0 software and synthetic benchmark archive, cite the version-specific Zenodo DOI. The concept DOI identifies the project across versions. The companion manuscript and supplementary information have no separate DOI in the supplied materials."
 title: "Green Catalyst Screening: Supporting Data and Code for an Interpretable Chemoinformatics Benchmark"
 type: software
 authors:
   - given-names: Gagan Sai Amith
     family-names: Pennada
     affiliation: VIT-AP University, India
-version: "0.3.0-pre-release"
+version: "0.3.0"
+date-released: 2026-11-07
 url: "https://github.com/amith2427/Green-Catalyst-Screening"
 identifiers:
   - type: doi
+    value: "10.5281/zenodo.24032491"
+    description: "Version-specific DOI for the published v0.3.0 archive."
+  - type: doi
     value: "10.5281/zenodo.23383768"
-    description: "Zenodo project concept DOI; this is not a v0.3.0 version DOI."
+    description: "Zenodo project concept DOI; identifies the project across versions."
 license: MIT
-abstract: "Supporting code and a synthetic chemoinformatics benchmark for auditing regression models, cross-validation strategies, sensitivity to non-causal decoy descriptors, TreeSHAP attributions, and an illustrative Green Performance Index. All reaction data and targets are synthetic; they are not experimental chemistry evidence or validated predictions of catalyst performance. The archived metrics are traceable and consistency-checked, but a complete independent clean rerun has not yet succeeded."
+abstract: "Supporting code and a synthetic chemoinformatics benchmark for auditing regression models, cross-validation strategies, sensitivity to non-causal decoy descriptors, TreeSHAP attributions, and an illustrative Green Performance Index. All reaction data and targets are synthetic; they are not experimental chemistry evidence or validated predictions of catalyst performance. The archived metrics are traceable and consistency-checked, but a complete independent clean rerun has not yet succeeded. Synthetic datasets and written documentation are CC BY 4.0."
 keywords:
   - chemoinformatics
   - synthetic benchmark
+  - synthetic data
   - machine learning
   - model interpretability
   - catalytic alcohol oxidation
@@ -25,9 +30,12 @@ keywords:
   - TreeSHAP
   - reproducibility
 preferred-citation:
-  type: article
-  title: "An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization"
+  type: software
+  title: "An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization: Software and Supporting Data"
   authors:
     - given-names: Gagan Sai Amith
       family-names: Pennada
-  notes: "Manuscript supplied with accompanying Supplementary Information; no separate DOI or journal publication details were supplied."
+  version: "0.3.0"
+  doi: "10.5281/zenodo.24032491"
+  date-released: 2026-11-07
+  url: "https://github.com/amith2427/Green-Catalyst-Screening"

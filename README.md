@@ -1,6 +1,15 @@
 # An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization
 
-[![DOI](https://zenodo.org/badge/1419940824.svg)](https://doi.org/10.5281/zenodo.23383768)
+[![Zenodo concept DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23383768.svg)](https://doi.org/10.5281/zenodo.23383768)
+
+## Official project links
+
+- **GitHub repository:** [amith2427/Green-Catalyst-Screening](https://github.com/amith2427/Green-Catalyst-Screening)
+- **Zenodo project record (concept DOI):** [10.5281/zenodo.23383768](https://doi.org/10.5281/zenodo.23383768)
+- **Zenodo preliminary v0.1.0 archive:** [10.5281/zenodo.23383769](https://doi.org/10.5281/zenodo.23383769)
+- **Zenodo versioning instructions:** [Create and publish a new version](https://help.zenodo.org/docs/deposit/manage-versions/)
+
+The concept DOI identifies the project across versions. It is not a separate DOI for the manuscript. A new version-specific DOI will be available only after the next Zenodo version is uploaded and published.
 
 This repository contains code and synthetic data accompanying the manuscript below. It examines model performance, cross-validation, sensitivity to non-causal decoy descriptors, TreeSHAP attribution, and an illustrative Green Performance Index (GPI) in a synthetic catalytic alcohol-oxidation benchmark.
 
@@ -12,13 +21,13 @@ This repository contains code and synthetic data accompanying the manuscript bel
 
 **Supplementary information:** Pennada, Gagan Sai Amith. *Supplementary Information: An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization.* VIT-AP University, India. Final PDF supplied 4 November 2026.
 
-No separate manuscript or SI DOI is identified in the supplied files. The Zenodo concept DOI below identifies the supporting project, not a separate paper DOI. See [PUBLICATION_REFERENCES.md](PUBLICATION_REFERENCES.md).
+No separate manuscript or SI DOI is identified in the supplied files. The Zenodo concept DOI above identifies the supporting project, not a separate paper DOI. See [PUBLICATION_REFERENCES.md](PUBLICATION_REFERENCES.md).
 
 ## Repository contents
 
-- `synthetic_benchmark_dataset.csv` — Seed 42 reference dataset (5,000 synthetic reactions; 13 columns).
-- `20_seed_metrics_log.csv` — per-seed metrics and TreeSHAP log (seeds 42–61; 20 rows; 34 columns).
-- `supplementary_experiments_log.csv` — positive-control substrate-effect runs (40 rows across σsub = 0, 4, 8, 12 for seeds 42–51) and Seed 42 learning curves (7 train sizes from 200 to 4,000; 47 data rows, 12 columns).
+- [`synthetic_benchmark_dataset.csv`](https://github.com/amith2427/Green-Catalyst-Screening/blob/main/synthetic_benchmark_dataset.csv) — Seed 42 reference dataset (5,000 synthetic reactions; 13 columns).
+- [`20_seed_metrics_log.csv`](https://github.com/amith2427/Green-Catalyst-Screening/blob/main/20_seed_metrics_log.csv) — per-seed metrics and TreeSHAP log (seeds 42–61; 20 rows; 34 columns).
+- [`supplementary_experiments_log.csv`](https://github.com/amith2427/Green-Catalyst-Screening/blob/main/supplementary_experiments_log.csv) — positive-control substrate-effect runs (40 rows across σsub = 0, 4, 8, 12 for seeds 42–51) and Seed 42 learning curves (7 train sizes from 200 to 4,000; 47 data rows, 12 columns).
 - `reproduce_benchmark.py` — reproduction script.
 - `substrates.csv` — 22-substrate SMILES and exact-mass library.
 - `requirements.txt` — Python dependencies.
@@ -41,13 +50,13 @@ The target yield follows a specified synthetic data-generating process. Decoy fe
 
 The Seed 42 generation logic and archived metrics were checked for consistency with manuscript summary statistics. The saved notebook reused an existing metrics log rather than rerunning the complete CV suite, and a separate independent clean run has not completed successfully. Results are traceable and consistency-checked, not independently reproduced in a clean environment.
 
-## Zenodo and versioning
+## Zenodo archive and next upload
 
-The project concept DOI is [10.5281/zenodo.23383768](https://doi.org/10.5281/zenodo.23383768). The preliminary v0.1.0 version DOI is [10.5281/zenodo.23383769](https://doi.org/10.5281/zenodo.23383769). Cite the version DOI for a specific archived version and the concept DOI for the project across versions.
+The current project record is [Zenodo concept DOI 10.5281/zenodo.23383768](https://doi.org/10.5281/zenodo.23383768). The preliminary v0.1.0 version is [10.5281/zenodo.23383769](https://doi.org/10.5281/zenodo.23383769). Cite the version DOI for a specific archived version and the concept DOI for the project across versions.
 
-The existing v0.2.0 archive is historical. All three final CSVs described above have now been added/replaced on GitHub from the files supplied on 4 November 2026. The final manuscript and SI PDFs supplied on that date have **not** yet replaced the earlier PDF files in the repository; the available GitHub write interface did not provide a working binary-PDF upload operation during this update.
+The proposed v0.3.0 upload ZIP contains the latest main manuscript PDF, supplementary-information PDF, all three CSV files, citation references, checksums, and draft Zenodo metadata. The three CSVs are already synchronized on GitHub. The final PDFs supplied on 4 November 2026 have **not** replaced the earlier PDF files in this GitHub repository; the available GitHub write interface did not provide a working binary-PDF upload operation during this update.
 
-The `.zenodo.json` file contains proposed v0.3.0 metadata only. No new Zenodo version has been uploaded or published, and no new version DOI has been assigned. Before publishing v0.3.0, add the final manuscript and SI PDFs to GitHub and the Zenodo deposit, then verify the full contents. See [Zenodo versioning documentation](https://help.zenodo.org/docs/deposit/manage-versions/).
+**Next step:** upload the prepared v0.3.0 ZIP as a **new version of the existing Zenodo record** using the [Zenodo project record](https://doi.org/10.5281/zenodo.23383768). Enter or confirm the deposit metadata using `.zenodo.json` from the ZIP, check the uploaded ZIP and metadata, and publish the new version. Zenodo assigns the version-specific DOI only after publication. Until that is done, v0.3.0 remains a draft and no new DOI is available. See [Zenodo versioning documentation](https://help.zenodo.org/docs/deposit/manage-versions/).
 
 ## Licenses
 

@@ -1,35 +1,34 @@
-# Proposed v0.3.0 release notes — NOT PUBLISHED
+# Green Catalyst Screening v0.3.0 — published
 
-## Project links
+## Archive identifiers and project links
 
+- **Zenodo v0.3.0 version DOI:** [10.5281/zenodo.24032491](https://doi.org/10.5281/zenodo.24032491)
+- **Zenodo project concept DOI:** [10.5281/zenodo.23383768](https://doi.org/10.5281/zenodo.23383768)
+- Zenodo v0.2.0 archive: [10.5281/zenodo.23388862](https://doi.org/10.5281/zenodo.23388862)
+- Zenodo v0.1.0 archive: [10.5281/zenodo.23383769](https://doi.org/10.5281/zenodo.23383769)
 - GitHub repository: [amith2427/Green-Catalyst-Screening](https://github.com/amith2427/Green-Catalyst-Screening)
-- Existing Zenodo project record (concept DOI): [10.5281/zenodo.23383768](https://doi.org/10.5281/zenodo.23383768)
-- Preliminary v0.1.0 archive DOI: [10.5281/zenodo.23383769](https://doi.org/10.5281/zenodo.23383769)
-- Zenodo versioning guide: [Create a new version](https://help.zenodo.org/docs/deposit/manage-versions/)
 
-## Synchronized on GitHub
+The v0.3.0 DOI identifies this exact archived version. The concept DOI identifies the project across versions.
 
-- `synthetic_benchmark_dataset.csv`: supplied final Seed 42 dataset (5,000 rows × 13 columns).
-- `20_seed_metrics_log.csv`: supplied final 20-seed metrics and TreeSHAP log (20 rows × 34 columns; seeds 42–61).
-- `supplementary_experiments_log.csv`: supplied positive-control and learning-curve log (47 data rows × 12 columns: 40 positive-control observations and 7 Seed 42 learning-curve observations).
-- `README.md`: direct GitHub and Zenodo project links, repository contents, and v0.3.0 upload instructions.
-- `PUBLICATION_REFERENCES.md`: companion manuscript/SI references and archive synchronization status.
-- `.zenodo.json`: proposed v0.3.0 metadata with related links to the GitHub repository and existing Zenodo concept DOI.
-- `CITATION.cff`: software citation and existing project concept DOI.
+## Included in the Zenodo v0.3.0 archive
 
-## Final PDFs supplied but not yet synchronized to GitHub
+- Final main manuscript PDF (16 pages) and supplementary-information PDF (2 pages).
+- `synthetic_benchmark_dataset.csv`: Seed 42 reference dataset (5,000 rows × 13 columns).
+- `20_seed_metrics_log.csv`: 20-seed metrics and TreeSHAP log (20 rows × 34 columns; seeds 42–61).
+- `supplementary_experiments_log.csv`: positive-control and learning-curve log (47 data rows × 12 columns).
+- `reproduce_benchmark.py`, `substrates.csv`, and `requirements.txt`.
+- Citation references, checksums, licensing notices, and traceability documentation.
 
-- `main_manuscript_final.pdf` — 16 pages.
-- `supplementary_info_final.pdf` — 2 pages.
+## GitHub synchronization
 
-The available GitHub write interface did not provide a working binary-file upload operation; the earlier PDF files remain in the repository. The final PDFs are included in the proposed v0.3.0 ZIP upload package.
+The three current CSVs and the reproduction source files are present on GitHub `main`. The final manuscript and SI PDFs are included in the Zenodo archive but the earlier PDF binaries in the GitHub repository have not been replaced because the connected GitHub write interface did not provide a working binary upload operation.
 
-## Zenodo upload and publication
+The GitHub `v0.3.0` tag/release is a separate marker from the Zenodo version and should point to the final repository commit.
 
-The proposed v0.3.0 ZIP is intended to be uploaded as a single file to a **new version** of the existing [Zenodo project record](https://doi.org/10.5281/zenodo.23383768). Use the `.zenodo.json` included in the ZIP as a reference when entering or confirming the deposit metadata. The metadata file inside the ZIP does not itself create or publish a Zenodo deposit.
+## Scientific scope and reproducibility
 
-No v0.3.0 record/version has been uploaded or published, and no new version DOI has been assigned. The existing project concept DOI remains [10.5281/zenodo.23383768](https://doi.org/10.5281/zenodo.23383768). After uploading the ZIP, check its filename and metadata, publish the new version, and then update this file and `CITATION.cff` with the DOI assigned by Zenodo.
+All benchmark reactions and target values are synthetic. The results are traceable and consistency-checked, but an independent complete clean rerun has not completed successfully; see `TRACEABILITY_REPORT.md`. TreeSHAP results are illustrative for one fitted Seed 42 model, and the Green Performance Index is an author-defined heuristic rather than a validated sustainability metric.
 
-## Scientific scope
+## Licensing
 
-All benchmark reactions and target values are synthetic. The results are traceable and consistency-checked, but an independent complete clean rerun has not completed successfully; see `TRACEABILITY_REPORT.md`.
+Python source code: MIT. Synthetic datasets and written documentation: CC BY 4.0. Third-party dependencies retain their respective licenses.

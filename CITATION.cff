@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "For the code and synthetic benchmark data, cite the archived Zenodo release using its version-specific DOI. The project concept DOI identifies the archived project across versions. For the companion manuscript, use the preferred citation below."
+message: "For the code and synthetic benchmark data, cite the version-specific Zenodo DOI after the corresponding release is published. The project concept DOI identifies the archive across versions. The companion manuscript has no separate DOI in the supplied materials."
 title: "Green Catalyst Screening: Supporting Data and Code for an Interpretable Chemoinformatics Benchmark"
 type: software
 authors:
@@ -8,6 +8,10 @@ authors:
     affiliation: VIT-AP University, India
 version: "0.3.0-pre-release"
 url: "https://github.com/amith2427/Green-Catalyst-Screening"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23383768"
+    description: "Zenodo project concept DOI; this is not a v0.3.0 version DOI."
 license: MIT
 abstract: "Supporting code and a synthetic chemoinformatics benchmark for auditing regression models, cross-validation strategies, sensitivity to non-causal decoy descriptors, TreeSHAP attributions, and an illustrative Green Performance Index. All reaction data and targets are synthetic; they are not experimental chemistry evidence or validated predictions of catalyst performance. The archived metrics are traceable and consistency-checked, but a complete independent clean rerun has not yet succeeded."
 keywords:

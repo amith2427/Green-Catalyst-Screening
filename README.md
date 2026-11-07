@@ -5,11 +5,12 @@
 ## Official project links
 
 - **GitHub repository:** [amith2427/Green-Catalyst-Screening](https://github.com/amith2427/Green-Catalyst-Screening)
+- **Latest Zenodo archive (v0.3.0):** [10.5281/zenodo.24032491](https://doi.org/10.5281/zenodo.24032491)
 - **Zenodo project record (concept DOI):** [10.5281/zenodo.23383768](https://doi.org/10.5281/zenodo.23383768)
-- **Zenodo preliminary v0.1.0 archive:** [10.5281/zenodo.23383769](https://doi.org/10.5281/zenodo.23383769)
-- **Zenodo versioning instructions:** [Create and publish a new version](https://help.zenodo.org/docs/deposit/manage-versions/)
+- **Zenodo v0.2.0 archive:** [10.5281/zenodo.23388862](https://doi.org/10.5281/zenodo.23388862)
+- **Zenodo v0.1.0 archive:** [10.5281/zenodo.23383769](https://doi.org/10.5281/zenodo.23383769)
 
-The concept DOI identifies the project across versions. It is not a separate DOI for the manuscript. A new version-specific DOI will be available only after the next Zenodo version is uploaded and published.
+The version-specific DOI identifies the exact v0.3.0 archive. The concept DOI identifies the project across versions and resolves to the latest published version. The Zenodo record is not a separate DOI for the manuscript.
 
 This repository contains code and synthetic data accompanying the manuscript below. It examines model performance, cross-validation, sensitivity to non-causal decoy descriptors, TreeSHAP attribution, and an illustrative Green Performance Index (GPI) in a synthetic catalytic alcohol-oxidation benchmark.
 
@@ -50,13 +51,13 @@ The target yield follows a specified synthetic data-generating process. Decoy fe
 
 The Seed 42 generation logic and archived metrics were checked for consistency with manuscript summary statistics. The saved notebook reused an existing metrics log rather than rerunning the complete CV suite, and a separate independent clean run has not completed successfully. Results are traceable and consistency-checked, not independently reproduced in a clean environment.
 
-## Zenodo archive and next upload
+## Zenodo archive and versions
 
-The current project record is [Zenodo concept DOI 10.5281/zenodo.23383768](https://doi.org/10.5281/zenodo.23383768). The preliminary v0.1.0 version is [10.5281/zenodo.23383769](https://doi.org/10.5281/zenodo.23383769). Cite the version DOI for a specific archived version and the concept DOI for the project across versions.
+The v0.3.0 archive was published on 7 November 2026 and has the version-specific DOI [10.5281/zenodo.24032491](https://doi.org/10.5281/zenodo.24032491). The project concept DOI is [10.5281/zenodo.23383768](https://doi.org/10.5281/zenodo.23383768); it identifies the project across versions. Earlier version DOIs are [v0.2.0: 10.5281/zenodo.23388862](https://doi.org/10.5281/zenodo.23388862) and [v0.1.0: 10.5281/zenodo.23383769](https://doi.org/10.5281/zenodo.23383769).
 
-The proposed v0.3.0 upload ZIP contains the latest main manuscript PDF, supplementary-information PDF, all three CSV files, citation references, checksums, and draft Zenodo metadata. The three CSVs are already synchronized on GitHub. The final PDFs supplied on 4 November 2026 have **not** replaced the earlier PDF files in this GitHub repository; the available GitHub write interface did not provide a working binary-PDF upload operation during this update.
+The published v0.3.0 ZIP contains the final main manuscript PDF, supplementary-information PDF, all three CSV files, the reproduction script, substrate library, dependency specifications, citation references, checksums, and license/traceability documentation. The three latest CSVs and source files are synchronized on GitHub. The final PDFs supplied on 4 November 2026 are archived in Zenodo, but have **not** replaced the earlier PDF files in this GitHub repository because the available GitHub write interface did not provide a working binary-PDF upload operation.
 
-**Next step:** upload the prepared v0.3.0 ZIP as a **new version of the existing Zenodo record** using the [Zenodo project record](https://doi.org/10.5281/zenodo.23383768). Enter or confirm the deposit metadata using `.zenodo.json` from the ZIP, check the uploaded ZIP and metadata, and publish the new version. Zenodo assigns the version-specific DOI only after publication. Until that is done, v0.3.0 remains a draft and no new DOI is available. See [Zenodo versioning documentation](https://help.zenodo.org/docs/deposit/manage-versions/).
+Cite the v0.3.0 version DOI when referring to this exact archive; cite the concept DOI when referring to the project across versions. The matching GitHub tag/release `v0.3.0` is a separate GitHub step and should point to the final repository commit.
 
 ## Licenses
 

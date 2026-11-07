@@ -5,8 +5,8 @@
       "affiliation": "VIT-AP University, India"
     }
   ],
-  "title": "An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization: Supporting Data and Code",
-  "description": "Proposed v0.3.0 software and data archive accompanying the manuscript and Supplementary Information by Gagan Sai Amith Pennada, VIT-AP University, India. GitHub source repository: https://github.com/amith2427/Green-Catalyst-Screening. Existing Zenodo project record (concept DOI): https://doi.org/10.5281/zenodo.23383768. The proposed upload ZIP contains the final main manuscript PDF, final Supplementary Information PDF, the 5,000-row Seed 42 synthetic dataset, the 20-seed metrics and TreeSHAP log for seeds 42–61, the supplementary positive-control and learning-curve log, citation references, checksums, and draft metadata. All reaction data and targets are synthetic. This metadata is a draft for a new version of the existing Zenodo record; no v0.3.0 version has been deposited or published, and no new version DOI has been assigned.",
+  "title": "An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization: Software and Supporting Data",
+  "description": "Published v0.3.0 software and data archive accompanying the manuscript and Supplementary Information by Gagan Sai Amith Pennada, VIT-AP University, India. Version-specific DOI: https://doi.org/10.5281/zenodo.24032491. Project concept DOI: https://doi.org/10.5281/zenodo.23383768. GitHub source repository: https://github.com/amith2427/Green-Catalyst-Screening. The archive contains the final main manuscript PDF, final Supplementary Information PDF, the 5,000-row Seed 42 synthetic dataset, the 20-seed metrics and TreeSHAP log for seeds 42–61, the supplementary positive-control and learning-curve log, the consolidated Python reproduction script, the 22-substrate library, dependency specifications, citation references, checksums, and traceability documentation. All reaction data and targets are synthetic. The Python source code is licensed under MIT; the synthetic datasets and written documentation are licensed under CC BY 4.0. The archived metrics are traceable and consistency-checked, but an independent complete clean rerun has not yet succeeded.",
   "access_right": "open",
   "license": "mit",
   "upload_type": "software",
@@ -14,6 +14,7 @@
   "keywords": [
     "chemoinformatics",
     "synthetic benchmark",
+    "synthetic data",
     "machine learning",
     "model interpretability",
     "catalytic alcohol oxidation",
@@ -23,8 +24,8 @@
     "green catalyst prioritization"
   ],
   "references": [
-    "Pennada, Gagan Sai Amith. An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization. Manuscript. VIT-AP University, India.",
-    "Pennada, Gagan Sai Amith. Supplementary Information for An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization. VIT-AP University, India."
+    "Pennada, Gagan Sai Amith. (2026). An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization. Manuscript. School of Computer Science and Engineering, VIT-AP University, India.",
+    "Pennada, Gagan Sai Amith. (2026). Supplementary Information: An Interpretable Chemoinformatics Benchmark for Evaluating Machine Learning Frameworks, Decoy Sensitivity, and Green Catalyst Prioritization. VIT-AP University, India."
   ],
   "related_identifiers": [
     {
